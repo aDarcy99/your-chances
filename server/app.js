@@ -1,3 +1,5 @@
+// Load environment variables from .env folder
+require("dotenv").config();
 //Requires
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -6,7 +8,7 @@ const path = require("path");
 const sampleRouter = require("./routes/samples.js");
 //use express
 const app = express();
-var port = 5500;
+var port = 3000;
 //Use static files in public on every route(middleware)
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(express.static(path.join(__dirname, "../src")));
@@ -18,6 +20,6 @@ app.use(bodyParser.json());
 //use routes
 app.use("/api/sample", sampleRouter);
 //Listen to port
-app.listen( port, ()=>{
+app.listen(process.env.PORT || port, ()=>{
     console.log(`server started on ${port}`);
 })
