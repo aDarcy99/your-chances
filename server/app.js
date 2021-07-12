@@ -4,8 +4,7 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
-//routes
-const sampleRouter = require("./routes/samples.js");
+
 //use express
 const app = express();
 var port = 3000;
@@ -18,8 +17,6 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
-//use routes
-app.use("/api/sample", sampleRouter);
 //Listen to port
 app.listen(process.env.PORT || port, ()=>{
     console.log(`server started on ${port}`);
