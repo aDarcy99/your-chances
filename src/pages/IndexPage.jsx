@@ -66,7 +66,7 @@ const useStyles = createUseStyles((theme) => ({
 export const IndexPage = (props) => {
   const theme = useTheme();
   const classes = useStyles();
-  console.log(theme);
+  
   const { currentCountry, setCurrentCountry } = useCurrentCountry();
 
   const onRandomCountryClick = () => {
