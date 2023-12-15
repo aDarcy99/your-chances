@@ -5,12 +5,8 @@
   "main": "server/app.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "npm run build && node server/app.js",
-    "client": "webpack-dev-server --mode development --hot",
-    "server": "nodemon server/app.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-prebuild": "npm install -f",
-    "heroku-postbuild": "npm run build"
+    "start": "npm run build",
+    "dev": "webpack-dev-server --mode development --hot"
   },
   "keywords": [],
   "author": "",
