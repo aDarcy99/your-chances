@@ -2,9 +2,9 @@
   "name": "your-chances",
   "version": "1.0.0",
   "description": "",
-  "main": "server/app.js",
+  "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
+    "build": "webpack",
     "dev": "webpack-dev-server --mode development --hot",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
